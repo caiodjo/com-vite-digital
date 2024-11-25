@@ -1,0 +1,20 @@
+{
+  "name": "convite_digital",
+  "version": "1.0.0",
+  "description": "portifolio project",
+  "scripts": {
+    "dev": "run-p packages:* apps:*",
+    "apps:backend": "cd apps/backend && npm run dev",
+    "packages:core": "cd packages/core && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

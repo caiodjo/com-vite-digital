@@ -1,0 +1,55 @@
+GET http://localhost:4000/ping
+
+###
+GET http://localhost:4000/eventos
+
+###
+GET http://localhost:4000/eventos/reuniao-familia-oliveira
+
+###
+GET http://localhost:4000/eventos/validar/evento-fullstack/21ff36d7-8fa7-495e-9339-d1687458b660
+
+###
+POST http://localhost:4000/eventos/acessar
+Content-Type: application/json
+
+{
+  "id": "65965e1c-8055-4795-b4a3-da93bbe97e31",
+  "senha": "familia2024"
+}
+###
+POST http://localhost:4000/eventos/reuniao-familia-oliveira/convidado
+Content-Type: application/json
+
+{
+  "nome": "Caio",
+  "email": "caio@vasco",
+  "confirmado": true,
+  "possuiAcompanhantes": true,
+  "qtdeAcompanhantes": 0
+}
+
+###
+POST http://localhost:4000/eventos
+Content-Type: application/json
+
+{
+  "alias": "evento-sack",
+  "nome": "Caio evento",
+  "data": "2024-12-01T06:00",
+  "local": "São Paulo, SP",
+  "descricao": "Um evento completo para aprender desenvolvimento fullstack do zero.",
+  "senha": "teste",
+  "publicoEsperado": 200,
+  "imagem": "https://images.prismic.io/vaultinum/0458a9f1-e149-4037-b9aa-aa4b4fb53c25_propriete-intellectuelle-code-source-protection-compressed.jpg?auto=compress,format&rect=0,0,2400,981&w=2400&h=981",
+  "imagemBackground": "https://images.prismic.io/vaultinum/0458a9f1-e149-4037-b9aa-aa4b4fb53c25_propriete-intellectuelle-code-source-protection-compressed.jpg?auto=compress,format&rect=0,0,2400,981&w=2400&h=981",
+  "convidados": [
+    {
+      "nome": "Alice Silva",
+      "email": "alice@example.com",
+      "confirmado": true,
+      "possuiAcompanhantes": true,
+      "qtdeAcompanhantes": 1
+    }
+  ]
+}
